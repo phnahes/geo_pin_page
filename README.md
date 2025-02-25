@@ -2,6 +2,8 @@
 
 **Geo Pin Page** é um projeto de **teste de marcação em mapas interativos** utilizando **Leaflet.js** e **OpenStreetMap**. Ele exibe **pontos de interesse** no mapa, incluindo **informações sobre cidades, prefeitos, população e universidades**.
 
+Disponivel em: 
+https://phnahes.github.io/geo_pin_page/
 ---
 
 ## 🗺️ **Funcionalidades**
