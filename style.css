@@ -2,6 +2,8 @@
 #map {
     width: 100%;
     height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -9,29 +11,144 @@
 /* Centraliza o título */
 h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     margin: 20px 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    color: #0b2a4c;
 }
 
-/* Estiliza os popups do Leaflet */
+/* Remove a borda azul do popup */
 .leaflet-popup-content-wrapper {
-    border-radius: 10px !important;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 12px !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
     background-color: #ffffff !important;
-    border: 2px solid #007bff;
+    border: none !important;
 }
 
-/* Estiliza o conteúdo dos popups */
-.leaflet-popup-content {
-    font-size: 16px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-/* Estiliza o botão de fechar do popup */
+/* Ajusta o botão de fechar do popup */
 .leaflet-popup-close-button {
-    color: #007bff !important;
     font-size: 18px !important;
+    color: #444 !important;
+    right: 8px !important;
+    top: 8px !important;
+}
+
+/* Estiliza a linha do nome da cidade e estado */
+.popup-container h3 {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+    font-weight: bold;
+}
+
+/* Deixa a cidade maior */
+.popup-container .cidade {
+    font-size: 20px;
+    color: #000000;
+}
+
+/* Estado menor */
+.popup-container .estado {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Ajusta o separador '/' */
+.popup-container .separador {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Demais estilos do popup */
+.popup-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Estiliza a área de universidades */
+.popup-universities {
+    margin-top: 10px;
+    background: #f9f9f9;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.popup-universities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popup-universities ul li {
+    font-size: 13px;
+    padding: 4px;
+    border-bottom: 1px solid #ddd;
+}
+
+.popup-universities ul li:last-child {
+    border-bottom: none;
+}
+
+/* Ícones */
+.popup-container i {
+    margin-right: 6px;
+    color: #000000;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+    }
+    .popup-container {
+        font-size: 14px;
+    }
+    .popup-container .thumb {
+        width: 80px;
+    }
+}
+
+.bandeira {
+    width: 100px;
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estiliza o título "Universidades:" fora da caixa */
+.titulo-universidades {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Estiliza a área de universidades */
+.popup-universities {
+    background: #fdfdfd;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de universidades */
+.popup-universities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-universities ul li {
+    font-size: 13px;
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Remove a linha do último item */
+.popup-universities ul li:last-child {
+    border-bottom: none;
 }
