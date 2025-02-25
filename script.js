@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Inicializa o mapa centrado no Brasil
-    var map = L.map('map').setView([-15.7801, -47.9292], 4);
+    var map = L.map('map').setView([-15.7801, -47.9292], 5);
 
     // Adiciona camada do OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -42,7 +42,14 @@ document.addEventListener("DOMContentLoaded", function() {
     capitais.forEach(ponto => {
         let marker = L.marker([ponto.lat, ponto.lng]).addTo(map);
 
-        // Adiciona evento de clique para exibir um popup com o nome e informações
-        marker.bindPopup(`<b>${ponto.nome}</b><br>${ponto.info}`);
+        // Criar um popup personalizado com HTML estilizado
+        let popupContent = `
+            <div style="text-align: center;">
+                <h3 style="margin: 0; color: #007bff;">${ponto.nome}</h3>
+                <p style="margin: 5px 0; font-size: 14px; color: #555;">${ponto.info}</p>
+            </div>
+        `;
+
+        marker.bindPopup(popupContent);
     });
 });
