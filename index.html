@@ -4,19 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interativo - Capitais do Brasil</title>
+    <title>Mapa Interativo</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Mapa Interativo</h1>
+    <h1 class="titulo-principal">
+        Análise e o diagnóstico do ensino de solos por meio de projetos de extensão no Brasil nas últimas décadas.
+    </h1>
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="dados.js"></script>
-    <script src="script.js"></script>
+    <script src="map.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+
+    <!-- Botão para abrir o modal -->
+    <button id="btnAbrirModal">Ver Gráfico de Modelos</button>
+
+    <!-- Modal oculto -->
+    <div id="modalGrafico" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Distribuição dos Modelos</h2>
+            <canvas id="graficoPizza"></canvas>
+        </div>
+    </div>
+
 
 </body>
+
 </html>
