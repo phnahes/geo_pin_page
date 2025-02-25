@@ -66,12 +66,7 @@ git clone https://github.com/seuusuario/geo_pin_page.git
 ```sh
 cd geo_pin_page
 ```
-3️⃣ Inicie um servidor local:
-```sh
-npx http-server
-```
-4️⃣ Acesse no navegador:  
-   **http://localhost:8080**
+3️⃣ Abra o index.html no seu navegador
 
 ---
 
