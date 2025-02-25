@@ -1,3 +1,8 @@
+/* Adicionar "const dados ="" antes do json (sem aspas) */
+const dados =
+
+/* ======= COLE SEU JSON ABAIXO ======== */
+
 [
     {
         "pais": "Brasil",
@@ -1360,3 +1365,9 @@
         "nome": "Solo, Água e Meio Ambiente no Extremo Oeste Catarinense"
     }
 ]
+
+/* ======= COLE SEU JSON ACIMA ======== */
+
+
+/* Adicionar ";" para fechar a variavel ao final */
+;
