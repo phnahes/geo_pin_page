@@ -34,6 +34,15 @@ h1 {
 }
 
 /* Estiliza a linha do nome da cidade e estado */
+/* Estiliza o box do popup */
+.popup-container {
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 10px;
+}
+
+/* Cidade maior, estado menor */
 .popup-container h3 {
     display: flex;
     justify-content: center;
@@ -42,13 +51,11 @@ h1 {
     font-weight: bold;
 }
 
-/* Deixa a cidade maior */
 .popup-container .cidade {
     font-size: 20px;
-    color: #000000;
+    color: #007bff;
 }
 
-/* Estado menor */
 .popup-container .estado {
     font-size: 14px;
     color: #666;
@@ -58,6 +65,18 @@ h1 {
 .popup-container .separador {
     font-size: 16px;
     color: #444;
+}
+
+/* Melhor espaçamento das informações */
+.popup-container p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #444;
+}
+
+/* Negrito nos títulos */
+.popup-container p strong {
+    color: #222;
 }
 
 /* Demais estilos do popup */
