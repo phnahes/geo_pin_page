@@ -1,11 +1,17 @@
+/* Criar espaço abaixo do header para não sobrepor o conteúdo */
+body {
+    padding-top: 70px;
+    /* Deve ser igual à altura do header */
+}
+
 /* Estiliza o mapa */
 #map {
-    width: 100%;
-    height: 80vh;
+    width: 95%;
+    height: 70vh;
     max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Centraliza o título */
@@ -117,6 +123,11 @@ h1 {
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-height: 70vh;
+    }
+
     .titulo-principal {
         font-size: 20px;
         /* Menor para celulares */
@@ -181,21 +192,17 @@ h1 {
     border-bottom: none;
 }
 
-/* Ajusta o título principal */
+/* Ajustar o título dentro do header */
 .titulo-principal {
-    font-size: 24px;
-    /* Define um tamanho base */
+    font-size: 22px;
     font-weight: bold;
-    text-align: center;
-    color: #102a43;
-    /* Azul escuro elegante */
-    margin: 20px auto;
+    color: white;
+    margin: 0;
+    padding: 0 20px;
     max-width: 80%;
-    /* Limita o tamanho máximo do texto */
     line-height: 1.4;
-    /* Melhora a leitura */
     word-wrap: break-word;
-    /* Quebra linhas automaticamente */
+    display: inline-block;
 }
 
 
@@ -225,7 +232,7 @@ h1 {
     background-color: #0056b3;
 }
 
-/* Estilizar o modal */
+/* O modal NÃO deve estar visível ao carregar a página */
 .modal {
     display: none;
     position: fixed;
@@ -237,16 +244,31 @@ h1 {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-/* Conteúdo do modal */
+
+/* Melhorar o design do conteúdo do modal */
 .modal-content {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 90%;
+    max-width: 600px;
+    /* Define um tamanho máximo */
+    max-height: 80vh;
+    /* Limita a altura do modal */
+    overflow-y: auto;
+    /* Permite rolagem interna caso o conteúdo ultrapasse */
     text-align: center;
     position: relative;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustar tamanho do canvas do gráfico */
+.modal-content canvas {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Botão de fechar */
@@ -256,4 +278,17 @@ h1 {
     right: 15px;
     font-size: 24px;
     cursor: pointer;
+}
+
+/* Estilizar o header */
+.header {
+    width: 100%;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
